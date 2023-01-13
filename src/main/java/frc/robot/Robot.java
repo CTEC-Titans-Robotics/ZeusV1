@@ -9,7 +9,6 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.operators.DriverOperator;
-import frc.robot.operators.ShootingOperator;
 import frc.robot.util.Constants;
 
 
@@ -22,7 +21,6 @@ import frc.robot.util.Constants;
 public class Robot extends TimedRobot
 {
     private DriverOperator mainDriver;
-    private ShootingOperator shootOperator;
 
     /**
      * This method is run when the robot is first started up and should be used for any
@@ -31,9 +29,6 @@ public class Robot extends TimedRobot
     @Override
     public void robotInit() {
         mainDriver = new DriverOperator();
-        shootOperator = new ShootingOperator();
-
-        shootOperator.init();
         mainDriver.init();
     }
     
